@@ -32,5 +32,5 @@ func main() {
 		count++
 	}
 
-	println(count)
+	fmt.Println(count) //println(count) と書くとAtCoderではなぜかエラーになる
 }
