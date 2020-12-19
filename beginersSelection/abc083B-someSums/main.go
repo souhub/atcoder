@@ -15,7 +15,7 @@ func main() {
 	// Answer
 	answer = 0
 
-	// Enter the values.
+	// Input the values.
 	fmt.Scanf("%d %d %d", &NMax, &A, &B)
 
 	// Algolithm
