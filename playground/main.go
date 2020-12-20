@@ -1,9 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	for i := 4; i <= 0; i-- {
-		fmt.Println(i)
+	// var S string
+	// fmt.Scanf("%s", &S)
+	s := "Helloworld"
+	fmt.Println(string(s[4]))
+
+}
+
+func reverse(s string) string {
+	rs := []rune(s)
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		rs[i], rs[j] = rs[j], rs[i]
 	}
+	return string(rs)
 }
