@@ -173,6 +173,48 @@ def insertion_sort(l: list) -> list:
     return l
 
 
+def merge_sort(numbers: list[int]) -> list[int]:
+    if len(numbers) <= 1:
+        return numbers
+
+    center = len(numbers)//2
+
+    L = numbers[:center]
+    R = numbers[center:]
+
+    merge_sort(L)
+    merge_sort(R)
+
+    # To check the change in the recrusion function
+    print('L:', L, 'R:', R, 'numbers:', numbers)
+    print('#########################')
+
+    i = j = k = 0
+
+    while i < len(L) and j < len(R):
+
+        if L[i] <= R[j]:
+            numbers[k] = L[i]
+            i += 1
+        else:
+            numbers[k] = R[j]
+            j += 1
+
+        k += 1
+
+    while i < len(L):
+        numbers[k] = L[i]
+        i += 1
+        k += 1
+
+    while j < len(R):
+        numbers[k] = R[j]
+        j += 1
+        k += 1
+
+    return numbers
+
+
 if __name__ == '__main__':
     l = [2, 7, 5, 25, 86, 4, 2, 22, 56, 4]
     print(insertion_sort(l))
