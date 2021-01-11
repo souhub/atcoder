@@ -16,11 +16,17 @@ for i in range(n):
 s1 = sorted(set(s1))
 s2 = sorted(set(s2))
 
-for ss1, ss2 in zip(s1, s2):
-    if ss1 == '!'+ss2:
-        print(ss2)
-        match = True
-        break
+# for ss1, ss2 in zip(s1, s2):
+#     if ss1 == '!'+ss2:
+#         print(ss2)
+#         match = True
+#         break
+for ss1 in s1:
+    for ss2 in s2:
+        if ss1 == '!'+ss2:
+            print(ss2)
+            match = True
+            break
 
-if not match:
+if match == False:
     print('satisfiable')
