@@ -1,1 +1,1 @@
-# To Practice AtCoder
+# For AtCoder
