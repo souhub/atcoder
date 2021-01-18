@@ -20,7 +20,6 @@ class Solution:
                     target2_index = j
 
             nums[target1_index], nums[target2_index] = nums[target2_index], nums[target1_index]
-            print(nums)
 
         for k in range(target1_index+1, len(nums)-1):
             for l in range(k+1, len(nums)):
