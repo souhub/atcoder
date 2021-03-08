@@ -8,4 +8,4 @@ for i in range(1, n):
         total += (a[i]-a[j])**2
     ans += total
 print(ans)
-# I coudn't solve it
+# I coudn't solve it.(TLE)
